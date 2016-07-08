@@ -43,7 +43,7 @@ class MonthlyServiceClientDashboardServiceProvider extends ServiceProvider
 
 
         $this->publishes([
-            __DIR__.'/../dist/' => public_path('vendor/rtclientdashboard'),
+            __DIR__.'/../../dist/' => public_path('vendor/rtclientdashboard'),
         ], 'public');
 
 
