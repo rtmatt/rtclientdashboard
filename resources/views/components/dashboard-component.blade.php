@@ -110,7 +110,7 @@
                                      data-hours_used="{{$month->hours_used}}"
                                         data-hours_available="{{$month->hours_available}}">
                                     <span class="month-name js--Month-Name">{{$month->name}}</span>
-                                    <div class="js--graph Month-Graph-Wrap" id="js--circle-{{$key}}"></div>
+                                    <div class="js--graph Month-Graph-Wrap" id="js--circle-{{$key}}{!!isset($dashboard_id)?'--dashboard-'.$dashboard_id:''!!}"></div>
                                 </div>
                             @endforeach
                         </div>

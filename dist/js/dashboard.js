@@ -370,6 +370,7 @@ function n(){var t=this,i=window||global;e.extend(this,{isNativeEvent:function(e
         if (!this.__initializeObjects(options)) {
             return;
         }
+
         this.__init();
     };
 //TODO: We need to update all the stuff for the admin manager.  Updating/reanimating months
@@ -420,9 +421,8 @@ function n(){var t=this,i=window||global;e.extend(this,{isNativeEvent:function(e
         __getGraphRadius: function () {
             var graph = $()
         },
-        __responsiveMonths: function () {
+        responsiveMonths: function () {
             for (var i = 0; i < this.months.length; i++) {
-
                 var month_width = this.months[i].querySelector('.js--graph').offsetWidth;
                 this.graphs[i].updateWidth(month_width / 5.25);
                 this.graphs[i].updateRadius(month_width / 2);
@@ -438,10 +438,13 @@ function n(){var t=this,i=window||global;e.extend(this,{isNativeEvent:function(e
                 var graph_wrap = month.querySelector('.js--graph');
 
                 var percent_ratio = month.dataset.percent_used / 100;
-
+                var wrapper_id = 'js--circle-' + i;
+                if(self.options.id!==null){
+                    wrapper_id+='--dashboard-'+self.options.id;
+                }
 
                 this.graphs[i] = Circles.create({
-                    id: 'js--circle-' + i,
+                    id: wrapper_id,
                     radius: graph_wrap.offsetWidth / 2,
                     //  value: month.dataset.hours_used,
                     maxValue: month.dataset.hours_available,
@@ -463,7 +466,7 @@ function n(){var t=this,i=window||global;e.extend(this,{isNativeEvent:function(e
                 window.onresize = function () {
                     clearTimeout(resizetimeout);
                     resizetimeout = setTimeout(function () {
-                        self.__responsiveMonths();
+                        self.responsiveMonths();
 
                     }, 250);
 
@@ -478,7 +481,7 @@ function n(){var t=this,i=window||global;e.extend(this,{isNativeEvent:function(e
             var self = this;
             window.setTimeout(function () {
                 self.drawAnnual();
-            }, 300)
+            }, 300);
         },
         updateAnnual: function (change) {
             this.annual_hours_used = parseFloat(this.annual_hours_used) + parseFloat(change);
@@ -550,6 +553,7 @@ function n(){var t=this,i=window||global;e.extend(this,{isNativeEvent:function(e
 
         },
         drawMonths: function () {
+
             if (!this.hasOwnProperty('months') || !this.hasOwnProperty('graphs')) {
                 return;
             }
@@ -789,7 +793,7 @@ function n(){var t=this,i=window||global;e.extend(this,{isNativeEvent:function(e
             modalTrigger: 'js--Modal-Trigger',
             modal: 'js--Modal',
             api_base_url:'http://dashboard.dev',
-
+            id:null,
             delay: false
         },
         topLevelObjects: [
