@@ -244,7 +244,7 @@
                                    name="user_browser_ver" placeholder="Browser Version">
                         </div>
                     </div>
-                    <button type="button" class="AlertFormIssueCol__specs-detect">Detect for me</button>
+                    {{--<button type="button" class="AlertFormIssueCol__specs-detect">Detect for me</button>--}}
                 </div>
                 <div class="AlertFormIssueCol__screenshot u--bottom-margin-50-mobile-min">
                     <span class="AlertIssueTitle">Attach Screenshot <span class="u--light-text">(Optional)</span></span>
