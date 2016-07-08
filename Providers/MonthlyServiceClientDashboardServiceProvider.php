@@ -39,6 +39,15 @@ class MonthlyServiceClientDashboardServiceProvider extends ServiceProvider
             $auth     = base64_encode("{$credentials['username']}:{$credentials['password']}");
             $view->with(compact('auth'));
         });
+
+
+
+        $this->publishes([
+            __DIR__.'/../dist/' => public_path('vendor/rtclientdashboard'),
+        ], 'public');
+
+
+
     }
 
 

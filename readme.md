@@ -53,6 +53,16 @@ DASHBOARD_API_NAME=xxx
 DASHBOARD_API_KEY=xxx
 ```
 
+### publish assets
+
+```  
+php artisan vendor:publish --provider="\RTMatt\MonthlyServiceClientDashboard\Providers\MonthlyServiceClientDashboardServiceProvider" --tag="public"
+
+```
+If you would like to make sure your public assets are always up-to-date, you can add this command to the post-update-cmd list in your composer.json file.
+
+
+
 
 Config overrides with env
 
