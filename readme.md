@@ -4,34 +4,6 @@
 ``` bash 
 composer require rtmatt/rtclientdashboard //:dev-master
 ```
-
-
-### Via Git
-#### Clone Repo
-from project root
-```  
-git clone git@bitbucket.org:redtrainws/monthlyserviceclientdashboard.git app/MonthlyServiceClientDashboard
-```
-
-#### Add to Autoloader
-in composer.json
-```  
-"autoload": {
-    ...
-    "psr-4": {
-     ...
-      "RTMatt\\MonthlyServiceClientDashboard\\": "app/MonthlyServiceClientDashboard"
-    }
-  },
-```
-
-```  
-composer dumpautoload
-```
-
-
-
-
 ### Add Service Provider
 in config/app.php providers array:
 ```
