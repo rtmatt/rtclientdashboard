@@ -1,5 +1,13 @@
 ## Installation
-### Clone Repo
+### Via Composer
+
+``` bash 
+composer require rtmatt/rtclientdashboard //:dev-master
+```
+
+
+### Via Git
+#### Clone Repo
 from project root
 ```  
 git clone git@bitbucket.org:redtrainws/monthlyserviceclientdashboard.git app/MonthlyServiceClientDashboard
