@@ -1,0 +1,11 @@
+{
+    "name": "rtmatt/monthlyserviceclientdashboard",
+    "description": "A dashboard to show monthly service usage for a client.",
+    "authors": [
+        {
+            "name": "Matt Emrick",
+            "email": "matt@redtrainwebservices.com"
+        }
+    ],
+    "require": {}
+}
