@@ -32,6 +32,7 @@ in config/app.php providers array:
 
 
 ## Usage
+### Add includes
 Within whatever file you want to show the dashboard, include the following:
 
 ``` 
@@ -43,6 +44,18 @@ and in the layout file before the closing body tag, include the following:
 ```  
 @include('rtclientdashboard::partials.dashboard-scripts')
 ```
+
+###Add credentials
+in your site's .env file:
+
+```  
+DASHBOARD_API_NAME=xxx
+DASHBOARD_API_KEY=xxx
+```
+
+
+Config overrides with env
+
 
 
 

@@ -25,9 +25,9 @@ class MonthlyServiceClientDashboardServiceProvider extends ServiceProvider
         view()->composer('rtclientdashboard::components.dashboard-component', function ($view) {
             $credentials    = $this->getAPICredentials();
             $client         = new \GuzzleHttp\Client([
-                'base_uri' => 'http://dashboard.dev',
+                'base_uri' => config('rtclientdashboard.api_base_url'),
             ]);
-            $response       = $client->request('GET', route('client-services-summary'),
+            $response       = $client->request('GET', config('rtclientdashboard.api_summary_endpoint'),
                 [ 'auth' => [ $credentials['username'], $credentials['password'] ] ]);
             $dashboard_data = json_decode($response->getBody()->getContents());
 
