@@ -12,10 +12,10 @@ class MonthlyServiceClientDashboardServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $path = __DIR__ . '/../resources/views';
+        $path = __DIR__ . '/../../resources/views';
         $this->loadViewsFrom($path, 'rtclientdashboard');
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/rtclientdashboard.php', 'rtclientdashboard');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/rtclientdashboard.php', 'rtclientdashboard');
     }
 
 
