@@ -729,7 +729,7 @@ function n(){var t=this,i=window||global;e.extend(this,{isNativeEvent:function(e
                         //todo: disable submit button and display user feedback the form is working
                         $.ajax({
                             type: 'POST',
-                            url: '/api/client-service/priority-alert',
+                            url: self.options.api_base_url+'/api/client-service/priority-alert',
                             data: data,
                             contentType: false,
                             processData: false,
@@ -788,6 +788,7 @@ function n(){var t=this,i=window||global;e.extend(this,{isNativeEvent:function(e
             alertSubmitButton: 'js--Alert-Submit-Button',
             modalTrigger: 'js--Modal-Trigger',
             modal: 'js--Modal',
+            api_base_url:'http://dashboard.dev',
 
             delay: false
         },
