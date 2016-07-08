@@ -13,7 +13,7 @@
                 </div>
                 <div class="modal-body clearfix">
                     <div class="services-icon">
-                        <img src="/images/discount.svg" alt="Some icon">
+                        <img src="/vendor/rtclientdashboard/images/discount.svg" alt="Some icon">
                     </div>
                     <div class="services-content">
                         <div class="services-content-title">Discounted Rates</div>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="modal-body clearfix">
                     <div class="services-icon">
-                        <img src="/images/alerts.svg" alt="Some icon">
+                        <img src="/vendor/rtclientdashboard/images/alerts.svg" alt="Some icon">
                     </div>
                     <div class="services-content">
                         <div class="services-content-title">Priority Support</div>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="modal-body clearfix">
                     <div class="services-icon">
-                        <img src="/images/monthlyreports.svg" alt="Some icon">
+                        <img src="/vendor/rtclientdashboard/images/monthlyreports.svg" alt="Some icon">
                     </div>
                     <div class="services-content">
                         <div class="services-content-title">Monthly Reports</div>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="modal-body clearfix">
                     <div class="services-icon">
-                        <img src="/images/monitoring.svg" alt="Some icon">
+                        <img src="/vendor/rtclientdashboard/images/monitoring.svg" alt="Some icon">
                     </div>
                     <div class="services-content">
                         <div class="services-content-title">24/7 Monitoring</div>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="modal-body clearfix">
                     <div class="services-icon">
-                        <img src="/images/vps.svg" alt="Some icon">
+                        <img src="/vendor/rtclientdashboard/images/vps.svg" alt="Some icon">
                     </div>
                     <div class="services-content">
                         <div class="services-content-title">Virtual Private Server</div>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="modal-body clearfix">
                     <div class="services-icon">
-                        <img src="/images/billing.svg" alt="Some icon">
+                        <img src="/vendor/rtclientdashboard/images/billing.svg" alt="Some icon">
                     </div>
                     <div class="services-content">
                         <div class="services-content-title">Hassle-Free Billing</div>
@@ -98,7 +98,7 @@
                 <div class="UsageContent__row clearfix">
                     <div class="UsageContent__label UsageContent__label--monthly u--float-left-tablet-portrait-min">
                         <div class="DashboardIconLabel clearfix">
-                            <img src='/images/icon-clock.png' class="DashboardIconLabel__icon" alt="Monthly Hours">
+                            <img src='/vendor/rtclientdashboard/images/icon-clock.png' class="DashboardIconLabel__icon" alt="Monthly Hours">
                             <span class="DashboardIconLabel__text DashboardIconLabel__text">Monthly<br> Usage</span>
                         </div>
                     </div>
@@ -120,7 +120,7 @@
                 <div class="UsageContent__row clearfix">
                     <div class="UsageContent__label UsageContent__label--yearly u--float-left-tablet-portrait-min">
                         <div class="DashboardIconLabel clearfix">
-                            <img src='/images/icon-calendar.png' class="DashboardIconLabel__icon" alt="Yearly Balance">
+                            <img src='/vendor/rtclientdashboard/images/icon-calendar.png' class="DashboardIconLabel__icon" alt="Yearly Balance">
                             <span class="DashboardIconLabel__text">Yearly<br> Balance</span>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                         <div class="u--inline-block">
                             <div class="DashboardIconLabel DashboardIconLabel--secondary-content clearfix u--float-left-tablet-portrait-min u--remove-float-desktop">
                                 <img class="DashboardIconLabel__icon u--remove-float-desktop u--margin-auto-desktop"
-                                     src='/images/icon-shield.png' alt="Last Backup">
+                                     src='/vendor/rtclientdashboard/images/icon-shield.png' alt="Last Backup">
                                 <span class="DashboardIconLabel__text DashboardIconLabel__text--backup">Last Backup</span>
                             </div>
                             <p class="StatusBarSecondaryInformation__item-text u--remove-float-desktop clearfix js--Last-Backup-Text">
@@ -162,7 +162,7 @@
                        href="#" data-toggle="modal" data-target="#myModal">
                         <div class="DashboardIconLabel DashboardIconLabel--secondary-content clearfix">
                             <img class="DashboardIconLabel__icon u--remove-float-desktop u--margin-auto-desktop"
-                                 src='/images/icon-document.png' alt="Monthly Services">
+                                 src='/vendor/rtclientdashboard/images/icon-document.png' alt="Monthly Services">
                             <span class="DashboardIconLabel__text DashboardIconLabel__text--services">View Monthly<br>Benefits</span>
                         </div>
                     </a>
@@ -170,7 +170,7 @@
                 <a class="StatusBarAlertButton u--float-left-tablet-portrait-min js--Dashboard__alert-toggle" href="#">
                     <div class="DashboardIconLabel DashboardIconLabel--secondary-content u--full-center-desktop clearfix">
                         <img class="DashboardIconLabel__icon DashboardIconLabel__icon--priority js--PriorityAlert-Toggle__icon"
-                             src='/images/icon-alert.png' data-alt-src="/images/icon-x.png" alt="Priority Alert">
+                             src='/vendor/rtclientdashboard/images/icon-alert.png' data-alt-src="/vendor/rtclientdashboard/images/icon-x.png" alt="Priority Alert">
                         <span class="DashboardIconLabel__text DashboardIconLabel__text--priority js--PriorityAlert-Toggle__text" data-toggle-template="Close">Priority Alert</span>
                     </div>
                 </a>
