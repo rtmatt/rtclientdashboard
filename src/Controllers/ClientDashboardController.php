@@ -15,7 +15,7 @@ class ClientDashboardController extends Controller{
     public function test($client_id){
 
         $rt_client = \RTMatt\MonthlyService\Client::find($client_id);
-        $key       = $rt_client->generateApiKey();
+        $key       = $rt_client->api_key;
         $username  = $key->api_name;
         $password  = \Hash::make($key->api_secret_key);
         $client   = new Client([
@@ -25,6 +25,6 @@ class ClientDashboardController extends Controller{
         $dashboard_data     = json_decode($response->getBody()->getContents());
         $auth = base64_encode("{$username}:{$password}");
 
-        return view('rtdashboard::dashboard', compact('dashboard_data','rt_client','client_id','auth'));
+        return view('rtclientdashboard::dashboard', compact('dashboard_data','rt_client','client_id','auth'));
     }
 }
