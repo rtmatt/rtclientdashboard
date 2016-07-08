@@ -21,8 +21,8 @@ elixir(function (mix) {
         'resources/assets/js/dashboard.js'
     ], 'dist/js/dashboard.js');
 
-    mix.copy('dist/js/dashboard.js', '../../public/js/dashboard.js');
-    mix.copy('dist/js/dashboard.js.map', '../../public/js/dashboard.js.map');
-    mix.copy('dist/css/dashboard.css', '../../public/css/dashboard.css');
-    mix.copy('dist/css/dashboard.css.map', '../../public/css/dashboard.css.map');
+    mix.copy('dist/js/dashboard.js', '../../../public/js/dashboard.js');
+    mix.copy('dist/js/dashboard.js.map', '../../../public/js/dashboard.js.map');
+    mix.copy('dist/css/dashboard.css', '../../../public/css/dashboard.css');
+    mix.copy('dist/css/dashboard.css.map', '../../../public/css/dashboard.css.map');
 });
