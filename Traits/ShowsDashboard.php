@@ -12,7 +12,7 @@ namespace RTMatt\MonthlyServiceClientDashboard\Traits;
 trait ShowsDashboard {
     use GetsDashboardData;
     public function showDashboard(){
-        $dashboard_data = $this->getDashboardData();
-        return view('rtclientdashboard::dashboard-test', $dashboard_data);
+       // $dashboard_data = $this->getDashboardArgs();
+        return view('rtclientdashboard::dashboard-test');
     }
 }

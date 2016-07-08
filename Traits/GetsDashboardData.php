@@ -10,7 +10,7 @@ namespace RTMatt\MonthlyServiceClientDashboard\Traits;
 
 
 trait GetsDashboardData {
-    public function getDashboardData(){
+    public function getDashboardArgs(){
         $username = env('DASHBOARD_API_NAME');
         $password = env('DASHBOARD_API_KEY');
         if(empty($username) || empty( $password )){
