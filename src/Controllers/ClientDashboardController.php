@@ -8,6 +8,7 @@
 namespace RTMatt\MonthlyServiceClientDashboard\Controllers;
 use Illuminate\Routing\Controller;
 use RTMatt\MonthlyServiceClientDashboard\Traits\ShowsDashboard;
+use GuzzleHttp\Client;
 
 class ClientDashboardController extends Controller{
    use ShowsDashboard;
