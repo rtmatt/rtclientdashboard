@@ -1,5 +1,5 @@
 @if(!empty($dashboard_data))
-    <link href='/css/dashboard.css' rel='stylesheet'>
+    <link href='/vendor/rtclientdashboard/css/dashboard.css' rel='stylesheet'>
 <div class="RT-Client_Dashboard" id="js--Client-Dashboard{!!isset($dashboard_id)?'_'.$dashboard_id:''!!}">
     <!-- Monthly Services Modal -->
     <div class="modal fade js--Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
