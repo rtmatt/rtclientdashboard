@@ -19,7 +19,7 @@
 
 <h1>Dashboard for {{$rt_client->name}}</h1>
 @if(!empty($dashboard_data))
-@include('rtdashboard::components.dashboard-component')
+@include('rtclientdashboard::components.dashboard-component')
 @else
         <h2>Nothing placeholder</h2>
 @endif
