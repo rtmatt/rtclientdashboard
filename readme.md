@@ -13,7 +13,7 @@ from project root
 git clone git@bitbucket.org:redtrainws/monthlyserviceclientdashboard.git app/MonthlyServiceClientDashboard
 ```
 
-### Add to Autoloader
+#### Add to Autoloader
 in composer.json
 ```  
 "autoload": {
