@@ -62,9 +62,16 @@ php artisan vendor:publish --provider="RTMatt\MonthlyServiceClientDashboard\Prov
 If you would like to make sure your public assets are always up-to-date, you can add this command to the post-update-cmd list in your composer.json file.
 
 
+## Configuration
+
+```  
+DASHBOARD_API_URL //the base url for the API with which the dashboard talks
+DASHBOARD_SUMMARY_API_ENDPOINT //the api endpoint where client service summaries live
+```
 
 
-Config overrides with env
+
+
 
 
 
