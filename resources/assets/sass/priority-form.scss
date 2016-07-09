@@ -1,98 +1,49 @@
 /* PRIORITY ALERT FORM
 ===========================================================================
+  Styles specific to the client-facing priority Alert Form
 ======================================================================== */
-// Development Styles
-.RT-Dashboard__Priority-form {
-  width: 95%;
-  margin: 0 auto 10px auto;
-}
-// End Development Styles
 
-
-.RT-Dashboard__Priority-form {
-  max-width: 1140px;
-  padding: 40px 25px;
-  color: #2f2f2f;
-  background-color: $status-bar-bg;
-  clear: both;
+.RT-Dashboard-Form--priority {
   box-sizing: border-box;
-  display: none;
   font-size: 12px;
   font-size: .6rem;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
   font-family: "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-
-  * {
-    box-sizing: border-box;
-
-    &:before, &:after {
-      box-sizing: border-box;
-    }
-  }
-
   & input, textarea {
     outline: 0;
   }
-
-  @media screen and (min-width: $md-desktop) {
-    border-top: 5px solid $dark-red;
-    padding: 80px 55px;
-  }
-
-  .PriorityAlertForm__submit-button {
-    background: #2f2f2f;
+  .RT-Dashboard-Form__button--priority-submit {
     width: 100%;
     margin: 20px 0 0 0;
-    color: #fff;
-    padding: 14.5px 50px;
-    border: 0;
-    font-size: 10px;
-    text-transform: uppercase;
-    transition: background 0.3s ease;
-    -webkit-transition: background 0.3s ease;
-    cursor: pointer;
-
-    &:hover {
-      background: #d50000;
-    }
-
     @media screen and (min-width: $md-desktop) {
       width: 50%;
       float: right;
     }
-    &:disabled{
-      background:rgba(#2f2f2f,.75);
-    }
   }
-
-  .AlertIssueTitle {
-    font-size: 16px;
-    color: $dark-grey;
-    display: block;
-    margin: 0 0 10px 0;
-  }
-
-
-
 
   /* AlertFormIssueCol
   =============================================================================
   * Wrapper for alert information
   =========================================================================== */
-  .AlertFormIssueCol {
-
+  .RT-Dashboard-Form__column {
     @media screen and (min-width: $md-desktop) {
       float: left;
-      width: 60%;
-      border-right: 3px solid $stroke-tail-grey;
-      padding-right: 50px;
     }
-  }
-
-  // ISSUE DESCRIPTION
-  .AlertFormIssueCol__description {
-
+    &--alert {
+      @media screen and (min-width: $md-desktop) {
+        width: 60%;
+        border-right: 3px solid $stroke-tail-grey;
+        padding-right: 50px;
+      }
+    }
+    &--contact {
+      @media screen and (min-width: $md-desktop) {
+        width: 40%;
+        padding-left: 50px;
+        margin-top: 20px;
+      }
+    }
   }
 
   .AlertFormIssueCol__description-col {
@@ -157,8 +108,8 @@
   .AlertFormIssueCol__frequency-options-option {
     position: absolute;
     opacity: 0;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: 100;
   }
 
@@ -223,7 +174,7 @@
   }
 
   .AlertFormIssueCol__specs-input {
-    &::-webkit-input-placeholder,&:-ms-input-placeholder {
+    &::-webkit-input-placeholder, &:-ms-input-placeholder {
       color: #bbb;
     }
   }
@@ -257,21 +208,12 @@
     text-align: left;
   }
 
-
-
-
   /* AlertFormContactCol
   =============================================================================
   * Wrapper for user's contact information
   =========================================================================== */
   .AlertFormContactCol {
 
-    @media screen and (min-width: $md-desktop) {
-      float: left;
-      width: 40%;
-      padding-left: 50px;
-      margin-top: 20px;
-    }
   }
 
   // USER CONTACT INFO
@@ -326,8 +268,6 @@
     resize: none;
   }
 
-
-
   /* UTILITY CLASSES
   ============================================================================
   *
@@ -344,8 +284,9 @@
     color: #bbb;
   }
 
+}
 
-} // END .RT-Dashboard__Priority-form
+// END .RT-Dashboard__Priority-form
 
 .clearfix {
   &:before, &:after {

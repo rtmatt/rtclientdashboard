@@ -1,22 +1,29 @@
 @import 'normalize';
 @import 'variables';
+@import 'dashboard-form';
 @import 'priority-form';
 @import 'modal';
 @import 'parsley';
 
 
 // Development Styles
-.RT-Dashboard__Status-bar {
+.RT-Client_Dashboard {
   width: 95%;
   margin: 0 auto 0 auto;
+  max-width: 1140px;
   position: relative;
+  * {
+    box-sizing: border-box;
+
+    &:before, &:after {
+      box-sizing: border-box;
+    }
+  }
 }
 // End Development Styles
 
 .RT-Client_Dashboard{
   .alert{
-    max-width: 1140px;
-    width: 95%;
     padding:.25em;
     text-align: center;
     font-size:14px;
@@ -40,6 +47,7 @@
 }
 .RT-Dashboard__Status-bar {
   position: relative;
+  margin:0 auto;
   background: $status-bar-bg;
   max-width: 1140px;
   font-size: 12px;
