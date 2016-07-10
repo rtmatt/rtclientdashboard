@@ -7,7 +7,7 @@
 
 .RT-Dashboard-Form {
   padding: 40px 25px;
-  display: none;
+//  display: none;
   color: #2f2f2f;
   background-color: $status-bar-bg;
   @include clearfix;
@@ -27,11 +27,16 @@
     border: none;
     font-size: 11px;
     padding: $form-control-padding-vertical $form-control-padding-horizontal;
+    height: $form-control-height;
     transition: all 0.5s ease;
     width: 100%;
     outline: 0;
     &::-webkit-input-placeholder, &:-ms-input-placeholder {
       color: #bbb;
+    }
+    &[disabled]{
+      background-color: lighten(#000, 85.5%);
+      cursor: not-allowed;
     }
   }
   textarea.RT-Dashboard-Form__form-control {
@@ -97,8 +102,22 @@
       background: #d50000;
     }
   }
+  &--warning{
+    &:hover{
+      background: #d46a00;
+    }
+  }
   &--success {
+    &:hover{
+      background: #00d400;
+//      background: #9bd500;
+      
+    }
     color: #FFF;
-    background: #9bd500;
+  }
+  &--info{
+    &:hover{
+      background: #00d4d4;
+    }
   }
 }
