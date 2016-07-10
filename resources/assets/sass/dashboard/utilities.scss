@@ -1,0 +1,49 @@
+.RT-Client_Dashboard {
+  /* UTILITY CLASSES
+  ============================================================================
+  *
+  ========================================================================== */
+  .u--float-left-tablet-portrait-min {
+    @media screen and (min-width: $tablet-portrait) {
+      float: left !important;
+    }
+  }
+
+  .u--inline-block {
+    display: inline-block;
+  }
+
+  .u--remove-float-desktop {
+    @media screen and (min-width: $md-desktop) {
+      float: none !important;
+    }
+  }
+
+  .u--margin-auto-desktop {
+    @media screen and (min-width: $md-desktop) {
+      margin: 0 auto;
+    }
+  }
+
+  .u--full-center-desktop {
+    @media screen and (min-width: $md-desktop) {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .u--light-text {
+    color: #bbb;
+  }
+  .u--margin-top-20 {
+    margin-top: 20px !important;
+  }
+  .u--margin-top-0 {
+    margin-top: 0 !important;
+  }
+
+  .clearfix {
+    @include clearfix;
+  }
+
+}

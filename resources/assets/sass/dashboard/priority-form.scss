@@ -1,0 +1,108 @@
+/* PRIORITY ALERT FORM
+===========================================================================
+  Styles specific to the client-facing priority Alert Form
+======================================================================== */
+
+.RT-Dashboard-Form--priority {
+  font-size: 12px;
+  font-size: .6rem;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  /* SECTIONS
+  =============================================================================
+  * Two primary sections of alert form
+  =========================================================================== */
+  .RT-Dashboard-Form__global-section {
+    @media screen and (min-width: $md-desktop) {
+      padding-top: 20px;
+      &--description {
+        border-right: 3px solid $stroke-tail-grey;
+        padding-right: 55px;
+      }
+      &--contact {
+        padding-left: 50px;
+      }
+    }
+  }
+  .RT-Dashboard-Form__button--priority-submit {
+    width: 100%;
+    margin: 20px 0 0 0;
+    @media screen and (min-width: $md-desktop) {
+      width: 50%;
+      float: right;
+    }
+  }
+  .RT-Dashboard-Form__frequency-option {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .RT-Dashboard-Form__frequency-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    background-color: $stroke-tail-grey;
+    cursor: pointer;
+    z-index: 90;
+    margin: 0;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 15px 0;
+    margin-top: 15px;
+    @media screen and (min-width: $tablet-portrait) {
+      margin-top: 0;
+    }
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+  .RT-Dashboard-Form__frequency-option:checked + label,
+  .Checked + label {
+    background: #9bd500;
+    color: #fff;
+  }
+  .RT-Dashboard-Form__screenshot-input {
+    width: 100%;
+    margin: 0 0 10px 0;
+    padding: 15px 20px;
+    font-size: 11px;
+    background: #dfdfdf;
+    cursor: pointer;
+    text-align: left;
+  }
+  .RT-Dashboard-Form__section{
+    &--contact-fieldset{
+      padding-top: 15px;
+      @media screen and (min-width:$md-desktop){
+        padding-top:0;
+        margin-top:0;
+      }
+    }
+    &--what-happens{
+      > div > div:nth-child(2) {
+        margin-top: 45px;
+        @media screen and (min-width: $tablet-portrait) {
+          margin-top: 0;
+        }
+      }
+    }
+    &--when-using{
+      .RT-Dashboard-Form__form-control {
+        margin-top: 15px;
+        @media screen and (min-width: $tablet-portrait) {
+          margin-top: 0;
+        }
+      }
+      .RT-Dashboard-Form__button--browser-detect {
+        margin-top: 15px;
+      }
+    }
+  }
+  .RT-Dashboard-Form__button--browser-detect {
+    width: 100%;
+  }
+  //Note: utility classes moved to main dashboard.scss file
+}

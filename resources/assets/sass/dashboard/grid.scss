@@ -1,0 +1,65 @@
+/* GRID
+   =============================================================================
+   * GRID FOR DASHBOARD FORM
+   =========================================================================== */
+.RT-Dashboard-Form {
+  .RT-Dashboard-Form__row {
+    @media screen and (min-width: $tablet-portrait) {
+      margin-left: -$grid-gutter_width;
+      margin-right: -$grid-gutter_width;
+      @include clearfix;
+    }
+  }
+
+  /* BASE COLUMN STYLES
+   =============================================================================
+   =========================================================================== */
+  [class*="RT-Dashboard-Form__col-tp"] {
+    @media screen and (min-width: $tablet-portrait) {
+      float: left;
+      padding: 0 $grid-gutter_width;
+    }
+  }
+  [class*="RT-Dashboard-Form__col-md"] {
+    @media screen and (min-width: $md-desktop) {
+      float: left;
+      padding: 0 $grid-gutter_width;
+    }
+  }
+
+  /* Column Widths
+   =============================================================================
+   =========================================================================== */
+  .RT-Dashboard-Form__col {
+    &-tp- {
+      @media screen and (min-width: $tablet-portrait) {
+        &25 {
+          width: 25%;
+        }
+        &33 {
+          width: percentage(1/3);
+        }
+        &50 {
+          width: 50%;
+        }
+      }
+    }
+    &-md- {
+      @media screen and (min-width: $md-desktop) {
+        &50 {
+          width: 50%;
+        }
+        &65 {
+          width: 65.7%;
+        }
+        &35 {
+          width: 34.3%;
+        }
+        &100{
+          width:100%;
+          float: none;
+        }
+      }
+    }
+  }
+}

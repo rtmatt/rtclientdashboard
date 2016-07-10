@@ -1,0 +1,54 @@
+// Development Styles
+//.RT-Client_Dashboard {
+////  width: 95%;
+//}
+
+// End Development Styles
+
+.RT-Client_Dashboard {
+  max-width: 1140px;
+  margin: 0 auto 0 auto;
+  position: relative;
+  * {
+    box-sizing: border-box;
+    &:before, &:after {
+      box-sizing: border-box;
+    }
+  }
+
+  /* RESET
+   =============================================================================
+   * Reset unnecessary defaults we don't want
+   =========================================================================== */
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    @include clearfix;
+  }
+
+  //Alerts
+  .alert {
+    padding: .25em;
+    text-align: center;
+    font-size: 14px;
+    border: solid 1px transparent;
+    border-radius: .35em;
+    margin: 0 auto;
+    ul {
+      list-style: none;
+    }
+    &.success {
+      border-color: #000000;
+      background-color: rgba(82, 255, 4, 0.08);
+
+    }
+    &.error {
+      border-color: rgba(255, 0, 0, 0.48);
+      background-color: rgba(255, 0, 0, 0.15);
+    }
+  }
+}
+
+
+

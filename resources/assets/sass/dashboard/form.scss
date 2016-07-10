@@ -1,0 +1,104 @@
+/* DASHBOARD FORM
+=============================================================================
+  Styles for all forms attached to the dashboard
+  Admin dashboard form
+  Client Priotity Alert Form
+=========================================================================== */
+
+.RT-Dashboard-Form {
+  padding: 40px 25px;
+  //  display: none;
+  color: #2f2f2f;
+  background-color: $status-bar-bg;
+  @include clearfix;
+  @media screen and (min-width: $md-desktop) {
+    border-top: 5px solid $dark-red;
+    padding: 55px 55px;
+  }
+  fieldset {
+    margin-top: 45px;
+  }
+  .error-block {
+    clear: both;
+  }
+
+  .RT-Dashboard-Form__form-control {
+    display: block;
+    border: none;
+    font-size: 11px;
+    padding: $form-control-padding-vertical $form-control-padding-horizontal;
+    transition: all 0.5s ease;
+    width: 100%;
+    outline: 0;
+    &::-webkit-input-placeholder, &:-ms-input-placeholder {
+      color: #bbb;
+    }
+  }
+  textarea.RT-Dashboard-Form__form-control {
+    height: 100px;
+    resize: none;
+  }
+  .RT-Dashboard-Form__label {
+    color: $dark-grey;
+    font-size: 9px;
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    &--large {
+      font-size: 16px;
+      margin-bottom: 15px;
+      text-transform: none;
+      letter-spacing: .8px;
+    }
+  }
+  .RT-Dashboard-Form__form-group-horizontal {
+    @include clearfix;
+    margin-bottom: 15px;
+    .RT-Dashboard-Form__label {
+      @media screen and (min-width: $md-desktop) {
+        float: left;
+        line-height: 43px;
+      }
+    }
+    .RT-Dashboard-Form__form-control {
+      @media screen and (min-width: $md-desktop) {
+        float: right;
+        width: 75%;
+      }
+    }
+    .error-block {
+      float: right;
+      width: 75%;
+    }
+  }
+}
+
+.RT-Dashboard-Form__button {
+  background: #2f2f2f;
+  color: #fff;
+  padding: 14.5px 12px;
+  text-align: center;
+  border: 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+  -webkit-transition: background 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background: #d50000;
+  }
+  &:disabled {
+    background: rgba(#2f2f2f, .75);
+  }
+  &--danger {
+    color: #000;
+    background: #590000;
+    &:hover {
+      background: #d50000;
+    }
+  }
+  &--success {
+    color: #FFF;
+    background: #9bd500;
+  }
+}

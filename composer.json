@@ -1,0 +1,16 @@
+{
+  "name": "rtmatt/rtclientdashboard",
+  "description": "A dashboard to show monthly service usage for a client.",
+  "authors": [
+    {
+      "name": "Matt Emrick",
+      "email": "matt@redtrainwebservices.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "RTMatt\\MonthlyServiceClientDashboard\\": "src"
+    }
+  }
+}
