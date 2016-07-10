@@ -7,7 +7,7 @@
 
 .RT-Dashboard-Form {
   padding: 40px 25px;
-//  display: none;
+  display: none;
   color: #2f2f2f;
   background-color: $status-bar-bg;
   @include clearfix;
@@ -16,7 +16,10 @@
     padding: 55px 55px;
   }
   fieldset {
-    margin-top: 45px;
+    border: none;
+    padding: 0;
+    margin: 45px 0 0 0;
+    @include clearfix;
   }
   .error-block {
     clear: both;
@@ -34,7 +37,7 @@
     &::-webkit-input-placeholder, &:-ms-input-placeholder {
       color: #bbb;
     }
-    &[disabled]{
+    &[disabled] {
       background-color: lighten(#000, 85.5%);
       cursor: not-allowed;
     }
@@ -102,21 +105,21 @@
       background: #d50000;
     }
   }
-  &--warning{
-    &:hover{
+  &--warning {
+    &:hover {
       background: #d46a00;
     }
   }
   &--success {
-    &:hover{
+    &:hover {
       background: #00d400;
-//      background: #9bd500;
-      
+      //      background: #9bd500;
+
     }
     color: #FFF;
   }
-  &--info{
-    &:hover{
+  &--info {
+    &:hover {
       background: #00d4d4;
     }
   }

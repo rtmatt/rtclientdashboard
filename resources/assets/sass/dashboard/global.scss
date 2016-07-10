@@ -16,16 +16,7 @@
     }
   }
 
-  /* RESET
-   =============================================================================
-   * Reset unnecessary defaults we don't want
-   =========================================================================== */
-  fieldset {
-    border: none;
-    padding: 0;
-    margin: 0;
-    @include clearfix;
-  }
+
 
   //Alerts
   .alert {
