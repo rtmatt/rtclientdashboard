@@ -991,6 +991,7 @@ textarea.parsley-error {
 =========================================================================== */
 .RT-Dashboard-Form {
   padding: 40px 25px;
+  display: none;
   color: #2f2f2f;
   background-color: #f1f1f1; }
   .RT-Dashboard-Form::before, .RT-Dashboard-Form::after {
