@@ -128,7 +128,7 @@
                         <div class="UsageContent__content u--float-left-tablet-portrait-min">
                             <div class="AnnualWrap js--annual_usage" data-year_percent_used="{{$dashboard_data->annual->percentage_used}}" data-year_hours_available="{{$dashboard_data->annual->hours_available}}" data-year_hours_used="{{$dashboard_data->annual->hours_used}}">
                                 <div class="CurrentHourBalance js--Dashboard__annual-usage-value">
-                                    <span class="CurrentHourBalance__balance">{{$dashboard_data->annual->hours_used}}</span>
+                                    <span class="CurrentHourBalance__balance js--Dashboard__annual-usage-text">{{$dashboard_data->annual->hours_used}}</span>
                                 </div>
                                 <div class="BalanceBar js--Dashboard__annual-usage-progress" data-usage="{{$dashboard_data->annual->percentage_used}}"></div>
                                 <div class="TotalAnnualHours">

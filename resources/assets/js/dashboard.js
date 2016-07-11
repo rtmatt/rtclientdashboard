@@ -1,3 +1,9 @@
+//BECAUSE CIRCLES IS A JACKASS AND DOESN'T LET YOU UPDATE THE TEXT DISPLAY
+Circles.prototype.setText = function (newText) {
+    this._text = newText;
+    this._textContainer.innerHTML = this._getText(0);
+};
+
 (function (window, document) {
     var ClientDashboard = function (options) {
         this.options = jQuery.extend(this.options, options);
@@ -26,7 +32,7 @@
             return true;
         },
         __initializeTopLevelObjects: function () {
-            this.topLevelObjects=this.__setTopLevelObjects();
+            this.topLevelObjects = this.__setTopLevelObjects();
             for (var k = 0; k < this.topLevelObjects.length; k++) {
                 var key = this.topLevelObjects[k];
                 if (key == "wrapper") {
@@ -75,13 +81,20 @@
             for (var i = 0; i < this.months.length; i++) {
                 var month = this.months[i];
                 var graph_wrap = month.querySelector('.js--graph');
-
+                if(month.classList.contains('current-month')){
+                    this.current_month_index=i;
+                }
                 var percent_ratio = month.dataset.percent_used / 100;
                 var wrapper_id = 'js--circle-' + i;
                 if (self.options.id !== null) {
                     wrapper_id += '--dashboard-' + self.options.id;
                 }
-
+                var colors = ['#DFDFDF', '#8dd624'];
+                month.overage = false;
+                if (parseInt(month.dataset.hours_used) > parseInt(month.dataset.hours_available)) {
+                    month.overage = true;
+                    colors = ['#DFDFDF', '#ff0000']
+                }
                 this.graphs[i] = Circles.create({
                     id: wrapper_id,
                     radius: graph_wrap.offsetWidth / 2,
@@ -89,7 +102,7 @@
                     maxValue: month.dataset.hours_available,
                     width: graph_wrap.offsetWidth / 5.25,
                     text: month.dataset.hours_used,
-                    colors: ['#DFDFDF', '#8dd624'],
+                    colors: colors,
                     duration: 400,
                     wrpClass: 'circles-wrp',
                     textClass: 'progressbar-text',
@@ -123,8 +136,8 @@
             }, 300);
         },
         updateAnnual: function (change) {
-            this.annual_hours_used = parseFloat(this.annual_hours_used) + parseFloat(change);
-            this.annual_value_element.innerText = this.annual_hours_used;
+            this.annual_hours_used = parseInt(this.annual_hours_used) + parseInt(change);
+            this.annual_value_text_element.innerText = this.annual_hours_used;
             this.drawAnnual();
 
         },
@@ -199,13 +212,41 @@
             for (var i = 0; i < this.months.length; i++) {
                 var data = this.months[i].dataset.percent_used / 100;
                 // this.drawMonth(i, data);
-                this.drawMonthWithCircles(i)
+                if (this.months[i].dataset.percent_used > 0) {
+                    this.drawMonthWithCircles(i)
+                }
             }
         },
         // DRAW A MONTH USING CIRCLES.JS
         // USING DATA FROM THE Months Member dataset, draw the circle.  That's it
         drawMonthWithCircles: function (index) {
-            this.graphs[index].update(this.months[index].dataset.hours_used);
+            var monthNode = this.months[index],
+                hours_used_raw = monthNode.dataset.hours_used,
+                hours_used = parseInt(hours_used_raw),
+                hours_available = parseInt(monthNode.dataset.hours_available),
+                graph = this.graphs[index],
+                overage = hours_used > hours_available;
+            if (this.months[index].overage == true && !overage) {
+                graph.updateColors(['#DFDFDF', '#8dd624']);
+                this.months[index].overage = false;
+            }
+            if (this.months[index].overage == false && overage) {
+                graph.updateColors(['#DFDFDF', '#ff0000']);
+            }
+            if (overage) {
+                this.months[index].overage = true;
+            }
+            graph.update(hours_used);
+            var text= hours_used;
+            if(hours_used<1){
+                var text="0";
+                if(this.current_month_index<index){
+                    var text="-";
+                }
+            }
+            
+            
+            graph.setText(text);
         },
         // THIS DRAWS A MONTH USING THE NOW-DEPRECATED PROGRESSBAR.JS
         drawMonth: function (month_index, data, value) {
@@ -252,7 +293,8 @@
             this.annual_wrap = this.wrapper.querySelector('.js--annual_usage'),
                 this.annual_percent_usage = this.annual_wrap.dataset.year_percent_used,
                 this.annual_progress = this.wrapper.querySelector('.js--Dashboard__annual-usage-progress'),
-                this.annual_value_element = this.wrapper.querySelector('.js--Dashboard__annual-usage-value');
+                this.annual_value_element = this.wrapper.querySelector('.js--Dashboard__annual-usage-value'),
+                this.annual_value_text_element = this.wrapper.querySelector('.js--Dashboard__annual-usage-text');
             this.annual_hours_available = this.annual_wrap.dataset.year_hours_available;
             this.annual_hours_used = this.annual_wrap.dataset.year_hours_used;
 
@@ -403,18 +445,24 @@
 
 
             __attachModalListener();
-            if(!self.options.admin_mode){
+            if (!self.options.admin_mode) {
                 __attachFormListener();
             }
 
         },
-        updateMonth: function (month_index, percent, value) {
+        updateMonth: function (month_index, value) {
             var monthNode = this.months[month_index];
-            monthNode.dataset.percent_used = percent;
-            var text_display = monthNode.querySelector('.progressbar-text');
-            text_display.innerText = value;
-            this.drawMonth(month_index, percent / 100, value);
+            monthNode.dataset.hours_used = value;
+            this.drawMonthWithCircles(month_index);
+
         },
+        //updateMonth: function (month_index, percent, value) {
+        //    var monthNode = this.months[month_index];
+        //    monthNode.dataset.percent_used = percent;
+        //    var text_display = monthNode.querySelector('.progressbar-text');
+        //    text_display.innerText = value;
+        //    this.drawMonth(month_index, percent / 100, value);
+        //},
 
         __init: function () {
             this.__initMonths();
@@ -439,7 +487,7 @@
             admin_mode: false
         },
         __setTopLevelObjects: function () {
-            if (this.options.admin_mode){
+            if (this.options.admin_mode) {
                 return [
                     'wrapper', 'alertToggle', 'alertForm', 'modalTrigger', 'modal', 'alertSubmitButton'
                 ];
@@ -450,7 +498,7 @@
 
         },
         __setNecessaryObjects: function () {
-            if (this.options.admin_mode){
+            if (this.options.admin_mode) {
                 return [
                     'wrapper', 'alertToggle', 'alertForm'
                 ];
