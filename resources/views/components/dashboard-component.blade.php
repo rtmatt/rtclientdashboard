@@ -10,86 +10,19 @@
                         </button>
                         <h4 class="modal-title" id="myModalLabel">Detailed Monthly Benefits</h4>
                     </div>
-                    <div class="modal-body clearfix">
-                        <div class="services-icon">
-                            <img src="/vendor/rtclientdashboard/images/discount.svg" alt="Some icon">
+                    @foreach($dashboard_data->benefits as $benefit)
+                        <div class="modal-body clearfix">
+                            <div class="services-icon">
+                                <img src="{{$benefit->icon}}" alt="{{$benefit->name}} Icon">
+                            </div>
+                            <div class="services-content">
+                                <div class="services-content-title">{{$benefit->name}}</div>
+                                <p class="services-content-body">
+                                    {{$benefit->description}}
+                                </p>
+                            </div>
                         </div>
-                        <div class="services-content">
-                            <div class="services-content-title">Discounted Rates</div>
-                            <p class="services-content-body">
-                                Save money on each service request and maximize your annual hours with 20% off the
-                                standard
-                                hourly rate.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="modal-body clearfix">
-                        <div class="services-icon">
-                            <img src="/vendor/rtclientdashboard/images/alerts.svg" alt="Some icon">
-                        </div>
-                        <div class="services-content">
-                            <div class="services-content-title">Priority Support</div>
-                            <p class="services-content-body">
-                                Access to our priority alert form gives you the highest priority turn-around times for
-                                all
-                                service requests and project needs.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="modal-body clearfix">
-                        <div class="services-icon">
-                            <img src="/vendor/rtclientdashboard/images/monthlyreports.svg" alt="Some icon">
-                        </div>
-                        <div class="services-content">
-                            <div class="services-content-title">Monthly Reports</div>
-                            <p class="services-content-body">
-                                Receive detailed monthly statistics regarding your website tra c, marketing strategy,
-                                sales
-                                goals, and more.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="modal-body clearfix">
-                        <div class="services-icon">
-                            <img src="/vendor/rtclientdashboard/images/monitoring.svg" alt="Some icon">
-                        </div>
-                        <div class="services-content">
-                            <div class="services-content-title">24/7 Monitoring</div>
-                            <p class="services-content-body">
-                                We monitor, update, and maintain your website’s server requirements and immediately
-                                respond
-                                to
-                                urgent noti cations.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="modal-body clearfix">
-                        <div class="services-icon">
-                            <img src="/vendor/rtclientdashboard/images/vps.svg" alt="Some icon">
-                        </div>
-                        <div class="services-content">
-                            <div class="services-content-title">Virtual Private Server</div>
-                            <p class="services-content-body">
-                                Professional Virtual Private Servers (VPS) enable faster speeds, greater security, and
-                                shorter
-                                development times.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="modal-body clearfix">
-                        <div class="services-icon">
-                            <img src="/vendor/rtclientdashboard/images/billing.svg" alt="Some icon">
-                        </div>
-                        <div class="services-content">
-                            <div class="services-content-title">Hassle-Free Billing</div>
-                            <p class="services-content-body">
-                                With one monthly invoice, don’t stress over multiple service requests, budget
-                                constraints,
-                                or
-                                unwanted surprises.
-                            </p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -204,7 +137,8 @@
                                 </div>
                             </fieldset>
                             <fieldset>
-                                <legend class="RT-Dashboard-Form__label RT-Dashboard-Form__label--large">This happens</legend>
+                                <legend class="RT-Dashboard-Form__label RT-Dashboard-Form__label--large">This happens
+                                </legend>
                                 <div class="RT-Dashboard-Form__row">
                                     <div class="RT-Dashboard-Form__col-tp-25">
                                         <input class="RT-Dashboard-Form__frequency-option" type="radio" id="frequencyEveryTime" name="frequency" value="always">
@@ -233,7 +167,8 @@
                                 </div>
                             </fieldset>
                             <fieldset class="RT-Dashboard-Form__section--when-using">
-                                <legend class="RT-Dashboard-Form__label RT-Dashboard-Form__label--large">When using</legend>
+                                <legend class="RT-Dashboard-Form__label RT-Dashboard-Form__label--large">When using
+                                </legend>
                                 <div class="RT-Dashboard-Form__row">
                                     <div class="RT-Dashboard-Form__col-tp-33">
                                         <input class="RT-Dashboard-Form__form-control u--margin-top-0" type="text" id="userDevice" name="user_device" placeholder="Device (ie. iPhone, PC)">
@@ -250,13 +185,18 @@
                                 </button>
                             </fieldset>
                             <fieldset>
-                                <label class="RT-Dashboard-Form__label RT-Dashboard-Form__label--large" for="fileAttach">Attach Screenshot <span class="u--light-text">(Optional)</span></label>
+                                <label class="RT-Dashboard-Form__label RT-Dashboard-Form__label--large" for="fileAttach">
+                                    Attach Screenshot
+                                    <span class="u--light-text">(Optional)</span>
+                                </label>
                                 <input class="RT-Dashboard-Form__screenshot-input" type="file" id="fileAttach" name="attachment">
                             </fieldset>
                         </div>
                         <div class="RT-Dashboard-Form__col-md-35 RT-Dashboard-Form__global-section RT-Dashboard-Form__global-section--contact">
                             <fieldset class="RT-Dashboard-Form__section--contact-fieldset">
-                                <legend class="RT-Dashboard-Form__label RT-Dashboard-Form__label--large u--bottom-margin-25-mobile-min">Who should we contact about this?</legend>
+                                <legend class="RT-Dashboard-Form__label RT-Dashboard-Form__label--large u--bottom-margin-25-mobile-min">
+                                    Who should we contact about this?
+                                </legend>
                                 <div class="RT-Dashboard-Form__row">
                                     <div class="RT-Dashboard-Form__col-tp-33 RT-Dashboard-Form__col-md-100">
                                         <div class="RT-Dashboard-Form__form-group-horizontal">
