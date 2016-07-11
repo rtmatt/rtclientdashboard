@@ -96,30 +96,25 @@
     background: #d50000;
   }
   &:disabled {
-    background: rgba(#2f2f2f, .75);
+    cursor: not-allowed;
+    background: lighten(#2f2f2f, 20%);
+
   }
   &--danger {
-    color: #000;
-    background: #590000;
-    &:hover {
-      background: #d50000;
-    }
+    //same styles as default
   }
   &--warning {
-    &:hover {
+    &:not(:disabled):hover {
       background: #d46a00;
     }
   }
   &--success {
-    &:hover {
+    &:not(:disabled):hover {
       background: #00d400;
-      //      background: #9bd500;
-
     }
-    color: #FFF;
   }
   &--info {
-    &:hover {
+    &:not(:disabled):hover {
       background: #00d4d4;
     }
   }
