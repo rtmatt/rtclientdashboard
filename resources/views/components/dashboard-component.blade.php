@@ -36,7 +36,7 @@
                         <div class="UsageContent__label UsageContent__label--monthly u--float-left-tablet-portrait-min">
                             <div class="DashboardIconLabel clearfix">
                                 <img src='/vendor/rtclientdashboard/images/icon-clock.png' class="DashboardIconLabel__icon" alt="Monthly Hours">
-                                <span class="DashboardIconLabel__text DashboardIconLabel__text">Monthly<br> Usage</span>
+                                <span class="DashboardIconLabel__text DashboardIconLabel__text">Monthly<br> Stuff</span>
                             </div>
                         </div>
                         <div class="UsageContent__content u--float-left-tablet-portrait-min">
