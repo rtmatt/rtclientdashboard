@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="BalanceBar js--Dashboard__annual-usage-progress" data-usage="{{$dashboard_data->annual->percentage_used}}"></div>
                                 <div class="TotalAnnualHours">
-                                    <span class="TotalAnnualHours__total">{{$dashboard_data->annual->hours_available}}</span>
+                                    <span class="TotalAnnualHours__total js--Dashboard__annual-usage-limit">{{$dashboard_data->annual->hours_available}}</span>
                                 </div>
                             </div>
                         </div>
