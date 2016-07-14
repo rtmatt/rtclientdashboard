@@ -24,6 +24,13 @@ and in the layout file before the closing body tag, include the following:
 ```  
 @include('rtclientdashboard::partials.dashboard-scripts')
 ```
+as well as the following within the head section:
+
+```  
+@include('rtclientdashboard::partials.dashboard-styles')
+```
+
+
 
 ###Add credentials
 in your site's .env file:
