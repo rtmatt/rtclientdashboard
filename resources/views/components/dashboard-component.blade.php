@@ -195,7 +195,7 @@
                                     Attach Screenshot
                                     <span class="u--light-text">(Optional)</span>
                                 </label>
-                                <input class="RT-Dashboard-Form__screenshot-input" type="file" id="fileAttach" name="attachment">
+                                <input class="RT-Dashboard-Form__screenshot-input" type="file" id="fileAttach" name="attachment" accept="image/*">
                             </fieldset>
                         </div>
                         <div class="RT-Dashboard-Form__col-md-35 RT-Dashboard-Form__global-section RT-Dashboard-Form__global-section--contact">
