@@ -13,7 +13,7 @@
 <body>
 <ul class="nav nav-tabs">
     @foreach(\RTMatt\MonthlyService\Client::all() as $client)
-        <li role="presentation"{!!$client->id==$client_id ? ' class="active"':''!!}><a href="/clients/test/{{$client->id}}">{{$client->name}}</a></li>
+        <li role="presentation"{!!$client->id==$client_id ? ' class="active"':''!!}><a href="/client/{{$client->id}}">{{$client->name}}</a></li>
     @endforeach
 </ul>
 
