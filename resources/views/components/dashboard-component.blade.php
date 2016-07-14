@@ -91,7 +91,7 @@
                         @if(isset($admin_mode))
                             <a class="StatusBarSecondaryInformation__item clearfix StatusBarSecondaryInformation__item--services" ng-click="clientDashboardController.logBackup()">
                                 <div class="DashboardIconLabel DashboardIconLabel--secondary-content clearfix">
-                                    <img class="DashboardIconLabel__icon u--remove-float-desktop u--margin-auto-desktop" src="/images/icon-clock.svg" alt="Log Backup">
+                                    <img class="DashboardIconLabel__icon DashboardIconLabel__icon--log-backup u--remove-float-desktop u--margin-auto-desktop" src="/vendor/rtclientmanager/images/icon-log.svg" alt="Log Backup">
                                     <span class="DashboardIconLabel__text DashboardIconLabel__text--services">Log<br>Backup</span>
                                 </div>
                             </a>
@@ -106,8 +106,14 @@
                     </div>
                     <a class="StatusBarAlertButton u--float-left-tablet-portrait-min js--Dashboard__alert-toggle" href="#">
                         <div class="DashboardIconLabel DashboardIconLabel--secondary-content u--full-center-desktop clearfix">
+                            @if(isset($admin_mode))
+                                <img class="DashboardIconLabel__icon DashboardIconLabel__icon--priority js--PriorityAlert-Toggle__icon" src='/vendor/rtclientmanager/images/icon-edit.svg' data-alt-src="/vendor/rtclientdashboard/images/icon-x.png" alt="Priority Alert">
+                                <span class="DashboardIconLabel__text DashboardIconLabel__text--priority js--PriorityAlert-Toggle__text" data-toggle-template="Close">Edit</span>
+                                @else
                             <img class="DashboardIconLabel__icon DashboardIconLabel__icon--priority js--PriorityAlert-Toggle__icon" src='/vendor/rtclientdashboard/images/icon-alert.png' data-alt-src="/vendor/rtclientdashboard/images/icon-x.png" alt="Priority Alert">
                             <span class="DashboardIconLabel__text DashboardIconLabel__text--priority js--PriorityAlert-Toggle__text" data-toggle-template="Close">Priority Alert</span>
+
+                            @endif
                         </div>
                     </a>
                 </div>
