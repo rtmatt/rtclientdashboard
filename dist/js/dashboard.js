@@ -744,7 +744,7 @@ Circles.prototype.setText = function (newText) {
                         __toggleSubmitButton();
                         $.ajax({
                             type: 'POST',
-                            url: self.options.api_base_url + '/api/client-service/priority-alert',
+                            url: self.options.api_base_url + '/api/client-manager/priority-alert',
                             data: data,
                             contentType: false,
                             processData: false,
