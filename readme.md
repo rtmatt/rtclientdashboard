@@ -1,3 +1,7 @@
+## Prerequisites
+* Laravel App
+* jQuery
+
 ## Installation
 ### Via Composer
 
