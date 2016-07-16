@@ -186,17 +186,17 @@
                                         <input class="RT-Dashboard-Form__form-control" type="text" id="userBrowser" name="user_browser_ver" placeholder="Browser Version">
                                     </div>
                                 </div>
-                                <button type="button" class="RT-Dashboard-Form__button RT-Dashboard-Form__button--browser-detect">
-                                    Detect for me
-                                </button>
+                                {{--<button type="button" class="RT-Dashboard-Form__button RT-Dashboard-Form__button--browser-detect">--}}
+                                    {{--Detect for me--}}
+                                {{--</button>--}}
                             </fieldset>
-                            <fieldset>
-                                <label class="RT-Dashboard-Form__label RT-Dashboard-Form__label--large" for="fileAttach">
-                                    Attach Screenshot
-                                    <span class="u--light-text">(Optional)</span>
-                                </label>
-                                <input class="RT-Dashboard-Form__screenshot-input" type="file" id="fileAttach" name="attachment" accept="image/*">
-                            </fieldset>
+                            {{--<fieldset>--}}
+                                {{--<label class="RT-Dashboard-Form__label RT-Dashboard-Form__label--large" for="fileAttach">--}}
+                                    {{--Attach Screenshot--}}
+                                    {{--<span class="u--light-text">(Optional)</span>--}}
+                                {{--</label>--}}
+                                {{--<input class="RT-Dashboard-Form__screenshot-input" type="file" id="fileAttach" name="attachment" accept="image/*">--}}
+                            {{--</fieldset>--}}
                         </div>
                         <div class="RT-Dashboard-Form__col-md-35 RT-Dashboard-Form__global-section RT-Dashboard-Form__global-section--contact">
                             <fieldset class="RT-Dashboard-Form__section--contact-fieldset">
@@ -229,7 +229,7 @@
                                 <label for="anything-else" class="RT-Dashboard-Form__label RT-Dashboard-Form__label--large">
                                     Is there anything else we should know?
                                 </label>
-                                <textarea class="RT-Dashboard-Form__form-control" id="anything-else" name="additiona_info"></textarea>
+                                <textarea class="RT-Dashboard-Form__form-control" id="anything-else" name="additional_info"></textarea>
                             </fieldset>
                             <input type="submit" data-toggle-text="Sending..." class="RT-Dashboard-Form__button RT-Dashboard-Form__button--priority-submit  js--Alert-Submit-Button" value="Send Alert">
                         </div>
