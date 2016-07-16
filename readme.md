@@ -6,7 +6,7 @@
 ### Via Composer
 
 ``` bash 
-composer require rtmatt/rtclientdashboard //:dev-master
+composer require rtmatt/rtclientdashboard:^0.0.2 //:dev-master
 ```
 ### Add Service Provider
 in config/app.php providers array:
