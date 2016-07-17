@@ -14,13 +14,5 @@
     "psr-4": {
       "RTMatt\\MonthlyServiceClientDashboard\\": "src"
     }
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "php artisan vendor:publish --provider=RTMatt\MonthlyServiceClientDashboard\Providers\MonthlyServiceClientDashboardServiceProvider --tag=public --force"
-    ],
-    "post-update-cmd": [
-      "php artisan vendor:publish --provider=RTMatt\MonthlyServiceClientDashboard\Providers\MonthlyServiceClientDashboardServiceProvider --tag=public --force"
-    ]
   }
 }
