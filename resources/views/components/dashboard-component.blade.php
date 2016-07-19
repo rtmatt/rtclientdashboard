@@ -1,31 +1,7 @@
 @if(!empty($dashboard_data))
     <div class="RT-Client_Dashboard" id="js--Client-Dashboard{!!isset($dashboard_id)?'_'.$dashboard_id:''!!}">
         <!-- Monthly Services Modal -->
-        <div class="modal fade js--Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close modal-close-btn" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title" id="myModalLabel">Detailed Monthly Benefits</h4>
-                    </div>
-                    @foreach($dashboard_data->benefits as $benefit)
-                        <div class="modal-body clearfix">
-                            <div class="services-icon">
-                                <img src="{{$benefit->icon}}" alt="{{$benefit->name}} Icon">
-                            </div>
-                            <div class="services-content">
-                                <div class="services-content-title">{{$benefit->name}}</div>
-                                <p class="services-content-body">
-                                    {{$benefit->description}}
-                                </p>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
+        @include('rtclientdashboard::components.partials.modal')
         <div class="RT-Dashboard__Status-bar">
             <a class='BrandBar' href="http://www.designledge.com/" target="blank">&nbsp;</a>
             <!-- This wrapper is for everything in the status bar except the brand bar -->
