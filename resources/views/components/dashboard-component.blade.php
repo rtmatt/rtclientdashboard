@@ -11,7 +11,7 @@
                     <div class="UsageContent__row clearfix">
                         <div class="UsageContent__label UsageContent__label--monthly u--float-left-tablet-portrait-min">
                             <div class="DashboardIconLabel clearfix">
-                                <img src='/vendor/rtclientdashboard/images/icon-clock.png' class="DashboardIconLabel__icon" alt="Monthly Hours">
+                                <img src='/vendor/rtclientdashboard/images/monthly-grey.svg' class="DashboardIconLabel__icon" alt="Monthly Hours">
                                 <span class="DashboardIconLabel__text DashboardIconLabel__text">Monthly<br> Usage</span>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                     <div class="UsageContent__row clearfix">
                         <div class="UsageContent__label UsageContent__label--yearly u--float-left-tablet-portrait-min">
                             <div class="DashboardIconLabel clearfix">
-                                <img src='/vendor/rtclientdashboard/images/icon-calendar.png' class="DashboardIconLabel__icon" alt="Yearly Balance">
+                                <img src='/vendor/rtclientdashboard/images/annual-grey.svg' class="DashboardIconLabel__icon" alt="Yearly Balance">
                                 <span class="DashboardIconLabel__text">Yearly<br> Balance</span>
                             </div>
                         </div>
@@ -54,7 +54,7 @@
                         <div class="StatusBarSecondaryInformation__item clearfix">
                             <div class="u--inline-block">
                                 <div class="DashboardIconLabel DashboardIconLabel--secondary-content clearfix u--float-left-tablet-portrait-min u--remove-float-desktop">
-                                    <img class="DashboardIconLabel__icon u--remove-float-desktop u--margin-auto-desktop" src='/vendor/rtclientdashboard/images/icon-shield.png' alt="Last Backup">
+                                    <img class="DashboardIconLabel__icon u--remove-float-desktop u--margin-auto-desktop" src='/vendor/rtclientdashboard/images/backup-grey.svg' alt="Last Backup">
                                     <span class="DashboardIconLabel__text DashboardIconLabel__text--backup">Last Backup</span>
                                 </div>
                                 <p class="StatusBarSecondaryInformation__item-text u--remove-float-desktop clearfix js--Last-Backup-Text">
@@ -67,14 +67,14 @@
                         @if(isset($admin_mode))
                             <a class="StatusBarSecondaryInformation__item clearfix StatusBarSecondaryInformation__item--services" ng-click="clientDashboardController.logBackup()">
                                 <div class="DashboardIconLabel DashboardIconLabel--secondary-content clearfix">
-                                    <img class="DashboardIconLabel__icon DashboardIconLabel__icon--log-backup u--remove-float-desktop u--margin-auto-desktop" src="/vendor/rtclientmanager/images/icon-log.svg" alt="Log Backup">
+                                    <img class="DashboardIconLabel__icon DashboardIconLabel__icon--log-backup u--remove-float-desktop u--margin-auto-desktop" src="/vendor/rtclientmanager/images/backup-btn-grey.svg" alt="Log Backup">
                                     <span class="DashboardIconLabel__text DashboardIconLabel__text--services">Log<br>Backup</span>
                                 </div>
                             </a>
                         @else
                             <a class="StatusBarSecondaryInformation__item clearfix StatusBarSecondaryInformation__item--services js--Modal-Trigger" href="#" data-toggle="modal" data-target="#myModal">
                                 <div class="DashboardIconLabel DashboardIconLabel--secondary-content clearfix">
-                                    <img class="DashboardIconLabel__icon u--remove-float-desktop u--margin-auto-desktop" src='/vendor/rtclientdashboard/images/icon-document.png' alt="Monthly Services">
+                                    <img class="DashboardIconLabel__icon u--remove-float-desktop u--margin-auto-desktop" src='/vendor/rtclientdashboard/images/view-services-grey.svg' alt="Monthly Services">
                                     <span class="DashboardIconLabel__text DashboardIconLabel__text--services">View Monthly<br>Benefits</span>
                                 </div>
                             </a>
@@ -83,10 +83,10 @@
                     <a class="StatusBarAlertButton u--float-left-tablet-portrait-min js--Dashboard__alert-toggle" href="#">
                         <div class="DashboardIconLabel DashboardIconLabel--secondary-content u--full-center-desktop clearfix">
                             @if(isset($admin_mode))
-                                <img class="DashboardIconLabel__icon DashboardIconLabel__icon--priority js--PriorityAlert-Toggle__icon" src='/vendor/rtclientmanager/images/icon-edit.svg' data-alt-src="/vendor/rtclientdashboard/images/icon-x.png" alt="Priority Alert">
+                                <img class="DashboardIconLabel__icon DashboardIconLabel__icon--priority js--PriorityAlert-Toggle__icon" src='/vendor/rtclientmanager/images/edit-white.svg' data-alt-src="/vendor/rtclientdashboard/images/icon-x.png" alt="Priority Alert">
                                 <span class="DashboardIconLabel__text DashboardIconLabel__text--priority js--PriorityAlert-Toggle__text" data-toggle-template="Close">Edit</span>
                                 @else
-                            <img class="DashboardIconLabel__icon DashboardIconLabel__icon--priority js--PriorityAlert-Toggle__icon" src='/vendor/rtclientdashboard/images/icon-alert.png' data-alt-src="/vendor/rtclientdashboard/images/icon-x.png" alt="Priority Alert">
+                            <img class="DashboardIconLabel__icon DashboardIconLabel__icon--priority js--PriorityAlert-Toggle__icon" src='/vendor/rtclientdashboard/images/alert-white.svg' data-alt-src="/vendor/rtclientdashboard/images/icon-x.png" alt="Priority Alert">
                             <span class="DashboardIconLabel__text DashboardIconLabel__text--priority js--PriorityAlert-Toggle__text" data-toggle-template="Close">Priority Alert</span>
 
                             @endif
