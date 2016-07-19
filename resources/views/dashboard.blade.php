@@ -8,7 +8,7 @@
     <title>Client Dashboard</title>
 
     <!-- Stylesheets -->
-    <link href='/css/dashboard.css' rel='stylesheet'>
+    <link href='/vendor/rtclientdashboard/css/dashboard.css' rel='stylesheet'>
 </head>
 <body>
 <ul class="nav nav-tabs">
