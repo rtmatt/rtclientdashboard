@@ -104,7 +104,6 @@
         }
       }
     }
-
     .BrandBar {
       width: 100%;
       height: 25px;
@@ -116,7 +115,7 @@
       transition: background-image 0.3s ease;
 
       &:hover {
-        text-decoration:none;
+        text-decoration: none;
         background-image: url('/vendor/rtclientdashboard/images/dl-green.svg');
       }
 
@@ -397,11 +396,65 @@
         @media screen and (min-width: $tablet-portrait) {
           padding: 6.5px;
         }
-
+        .Dashboard-background-icon {
+          display: block;
+          margin: 0 auto;
+          position: relative;
+          height: 18px;
+          @media screen and (min-width: $md-desktop) {
+            margin-bottom: 2px;
+          }
+          &:before, &:after {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 3;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: opacity .3s ease;
+            display: block;
+          }
+          &:before {
+            opacity: 1;
+          }
+          &:after {
+            opacity: 0;
+          }
+          &--log-backup {
+            width: 18px;
+            &:before {
+              background-image: url('/vendor/rtclientmanager/images/backup-btn-grey.svg');
+            }
+            &:after {
+              background-image: url('/vendor/rtclientmanager/images/backup-btn-white.svg');
+            }
+          }
+          &--benefits {
+            width: 14px;
+            &:before {
+              background-image: url('/vendor/rtclientdashboard/images/view-services-grey.svg');
+            }
+            &:after {
+              background-image: url('/vendor/rtclientdashboard/images/view-services-white.svg');
+            }
+          }
+        }
         &:hover {
           background-color: $status-bar-green;
           color: #ffffff;
+          .Dashboard-background-icon{
+            &:after {
+              opacity: 1;
+            }
+            &:before {
+              opacity: 0;
+            }
+          }
         }
+
       }
     }
     .StatusBarSecondaryInformation__item-text {

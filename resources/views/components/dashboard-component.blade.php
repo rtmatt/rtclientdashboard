@@ -67,14 +67,14 @@
                         @if(isset($admin_mode))
                             <a class="StatusBarSecondaryInformation__item clearfix StatusBarSecondaryInformation__item--services" ng-click="clientDashboardController.logBackup()">
                                 <div class="DashboardIconLabel DashboardIconLabel--secondary-content clearfix">
-                                    <img class="DashboardIconLabel__icon DashboardIconLabel__icon--log-backup u--remove-float-desktop u--margin-auto-desktop" src="/vendor/rtclientmanager/images/backup-btn-grey.svg" alt="Log Backup">
+                                    <span class="Dashboard-background-icon DashboardIconLabel__icon u--remove-float-desktop u--margin-auto-desktop Dashboard-background-icon--log-backup">&nbsp;</span>
                                     <span class="DashboardIconLabel__text DashboardIconLabel__text--services">Log<br>Backup</span>
                                 </div>
                             </a>
                         @else
                             <a class="StatusBarSecondaryInformation__item clearfix StatusBarSecondaryInformation__item--services js--Modal-Trigger" href="#" data-toggle="modal" data-target="#myModal">
                                 <div class="DashboardIconLabel DashboardIconLabel--secondary-content clearfix">
-                                    <img class="DashboardIconLabel__icon u--remove-float-desktop u--margin-auto-desktop" src='/vendor/rtclientdashboard/images/view-services-grey.svg' alt="Monthly Services">
+                                    <span class="Dashboard-background-icon DashboardIconLabel__icon u--remove-float-desktop u--margin-auto-desktop Dashboard-background-icon--benefits">&nbsp;</span>
                                     <span class="DashboardIconLabel__text DashboardIconLabel__text--services">View Monthly<br>Benefits</span>
                                 </div>
                             </a>
