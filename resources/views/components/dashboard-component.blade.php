@@ -153,13 +153,14 @@
                                 </legend>
                                 <div class="RT-Dashboard-Form__row">
                                     <div class="RT-Dashboard-Form__col-tp-33">
-                                        <input class="RT-Dashboard-Form__form-control u--margin-top-0" type="text" id="userDevice" name="user_device" placeholder="Device (ie. iPhone, PC)">
+                                        <input class="RT-Dashboard-Form__form-control u--margin-top-0" type="text" id="userDevice" name="user_device" placeholder="Device (iPhone, Android, PC, Mac, etc.)">
                                     </div>
                                     <div class="RT-Dashboard-Form__col-tp-33">
-                                        <input class="RT-Dashboard-Form__form-control" type="text" id="userOS" name="user_browser" placeholder="Browser (ie. Chrome, Safari)">
+                                        <input class="RT-Dashboard-Form__form-control" type="text" id="userOS" name="user_browser" placeholder="Browser (Chrome, IE, Safari, Firefox, etc.)">
                                     </div>
                                     <div class="RT-Dashboard-Form__col-tp-33">
-                                        <input class="RT-Dashboard-Form__form-control" type="text" id="userBrowser" name="user_browser_ver" placeholder="Browser Version">
+                                        <input class="RT-Dashboard-Form__form-control" type="text" id="userBrowser" name="user_browser_ver" placeholder="Browser Version (8, 9, 10, Recently Updated, Don’t Know, etc.)
+">
                                     </div>
                                 </div>
                                 {{--<button type="button" class="RT-Dashboard-Form__button RT-Dashboard-Form__button--browser-detect">--}}
