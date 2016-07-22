@@ -500,7 +500,7 @@ textarea.parsley-error {
     font-size: 14px;
     border: solid 1px transparent;
     border-radius: .35em;
-    margin: 0 auto; }
+    margin: 0 auto 10px; }
     .RT-Client_Dashboard .alert ul {
       list-style: none; }
     .RT-Client_Dashboard .alert.success {
@@ -801,9 +801,9 @@ textarea.parsley-error {
         .RT-Client_Dashboard .RT-Dashboard__Status-bar .StatusBarSecondaryInformation__item--services .Dashboard-background-icon--log-backup {
           width: 18px; }
           .RT-Client_Dashboard .RT-Dashboard__Status-bar .StatusBarSecondaryInformation__item--services .Dashboard-background-icon--log-backup:before {
-            background-image: url("/vendor/rtclientdashboard/images/backup-btn-grey.svg"); }
+            background-image: url("/vendor/rtclientmanager/images/backup-btn-grey.svg"); }
           .RT-Client_Dashboard .RT-Dashboard__Status-bar .StatusBarSecondaryInformation__item--services .Dashboard-background-icon--log-backup:after {
-            background-image: url("/vendor/rtclientdashboard/images/backup-btn-white.svg"); }
+            background-image: url("/vendor/rtclientmanager/images/backup-btn-white.svg"); }
         .RT-Client_Dashboard .RT-Dashboard__Status-bar .StatusBarSecondaryInformation__item--services .Dashboard-background-icon--benefits {
           width: 14px; }
           .RT-Client_Dashboard .RT-Dashboard__Status-bar .StatusBarSecondaryInformation__item--services .Dashboard-background-icon--benefits:before {
@@ -813,9 +813,9 @@ textarea.parsley-error {
       .RT-Client_Dashboard .RT-Dashboard__Status-bar .StatusBarSecondaryInformation__item--services:hover {
         background-color: #9bd500;
         color: #ffffff; }
-        .RT-Client_Dashboard .RT-Dashboard__Status-bar .StatusBarSecondaryInformation__item--services:hover .Dashboard-background-icon--benefits:after {
+        .RT-Client_Dashboard .RT-Dashboard__Status-bar .StatusBarSecondaryInformation__item--services:hover .Dashboard-background-icon:after {
           opacity: 1; }
-        .RT-Client_Dashboard .RT-Dashboard__Status-bar .StatusBarSecondaryInformation__item--services:hover .Dashboard-background-icon--benefits:before {
+        .RT-Client_Dashboard .RT-Dashboard__Status-bar .StatusBarSecondaryInformation__item--services:hover .Dashboard-background-icon:before {
           opacity: 0; }
   .RT-Client_Dashboard .RT-Dashboard__Status-bar .StatusBarSecondaryInformation__item-text {
     padding: 0;

@@ -752,7 +752,7 @@ Circles.prototype.setText = function (newText) {
                                 "Authorization": 'Basic ' + self.options.auth
                             },
                             success: function (data) {
-                                self.__handleResponse(['We received your message and will respond soon.'], 'success', self.alertForm);
+                                self.__handleResponse(['The DESIGNLEDGE team has been alerted! We’ll reach out as soon as the issue has been resolved or if we have any questions.'], 'success', self.alertForm);
                                 __resetForm();
                                 __toggleSubmitButton();
                             },
