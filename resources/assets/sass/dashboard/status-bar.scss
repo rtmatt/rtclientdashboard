@@ -116,6 +116,7 @@
       transition: background-image 0.3s ease;
 
       &:hover {
+        text-decoration:none;
         background-image: url('/vendor/rtclientdashboard/images/dl-green.svg');
       }
 
